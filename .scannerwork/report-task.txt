@@ -1,0 +1,6 @@
+projectKey=exercice_tabla_datos
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=exercice_tabla_datos
+ceTaskId=f491b173-7466-45ce-9f31-288cfacf690e
+ceTaskUrl=http://localhost:9000/api/ce/task?id=f491b173-7466-45ce-9f31-288cfacf690e

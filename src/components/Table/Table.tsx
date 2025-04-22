@@ -11,7 +11,8 @@ export default function Table(){
     const [productos, setProductos] = useState<Product[]>([]);
     const [search, setSearch] = useState<string>('');
     const filteredProducts = productos.filter((item: Product) => item.title.toLowerCase().includes(search.toLowerCase()));
-  
+    const [error, setError] = useState<string | null>(null);
+
     useEffect(() => {
         const fetchProductos = async () => {
           try {
@@ -20,6 +21,7 @@ export default function Table(){
             setProductos(response.data);
           } catch (error) {
             console.error("Error fetching products:", error);
+            setError('Error al cargar los productos');
           }
         };
         fetchProductos();
@@ -82,6 +84,11 @@ return (
           </tbody>
         </table>
       </div>
+      {error && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded my-6" role="alert">
+                    {error}
+                </div>
+            )}
     </>
 )
 }

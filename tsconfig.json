@@ -7,12 +7,16 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@api/*": ["api/*"]
+      "@api/*": ["api/*"],
+      "@components/*": ["components/*"]
     },
     "target": "ESNext",
     "module": "ESNext",
     "strict": true,
     "moduleResolution": "Node",
-    "types": ["node"]
+    // "types": ["node"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   }
 }
